@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.row_name_item.view.*
 
-class NamesRecyclerViewAdapter(val namesList: List<String>) :
+
+
+class NamesRecyclerViewAdapter(val namesList: List<Names>) :
     RecyclerView.Adapter<NamesRecyclerViewAdapter.NamesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NamesViewHolder {
@@ -19,7 +21,7 @@ class NamesRecyclerViewAdapter(val namesList: List<String>) :
     }
 
     override fun onBindViewHolder(holder: NamesViewHolder, position: Int) {
-        holder.rowView.tvName.text = namesList[position]
+        holder.rowView.tvName.text = namesList[position].toString()
     }
 
     class NamesViewHolder(val rowView: View) : RecyclerView.ViewHolder(rowView)
