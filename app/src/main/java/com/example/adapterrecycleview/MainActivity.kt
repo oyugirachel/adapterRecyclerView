@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 Names("Kame",18,"Dancing","11/1/2001"),
                 Names("Esther",21,"Reading Novels","10/4/1999")
 
-            )
+            ))
             rvNames.adapter = namesAdapter
     }
 }
